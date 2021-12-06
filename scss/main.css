@@ -24,7 +24,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 .popup-alert {
-  width: 40rem;
+  width: 85%;
+  max-width: 40rem;
   height: 20rem;
   background-image: -webkit-gradient(linear, left top, right top, from(#ddd6f3), to(#faaca8));
   background-image: linear-gradient(to right, #ddd6f3, #faaca8);
