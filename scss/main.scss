@@ -1,0 +1,102 @@
+@import 'base/reset';
+@import 'base/variables';
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: $very-light-gray;
+}
+
+.main {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    & div:first-child {
+        border-top-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+    }
+
+    & div:last-child {
+        border-bottom-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+    }
+    
+    .col {
+        padding: 3rem;
+
+        img,
+        h2,
+        p {
+           margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+
+        .btn-learnMore {
+            padding: 1rem 2.5rem;
+            background: $very-light-gray;
+            border-radius: 2.5rem;
+            color: #000;
+            font-size: 1.8rem;
+
+            &.btn-learnMore--orange {
+                color: $bright-orange;
+            }
+            &.btn-learnMore--darkCyan {
+                color: $dark-cyan;
+            }
+            &.btn-learnMore--veryDarkCyan {
+                color: $very-dark-cyan;
+            }
+        }
+
+        &.col--sedans {
+            background-color: $bright-orange;
+        }
+        &.col--suvs {
+            background-color: $dark-cyan;
+        }
+        &.col--luxury {
+            background-color: $very-dark-cyan;
+        }
+    }
+}
+
+//
+// Typography
+//
+
+h2, a {
+    color: $very-light-gray;
+    font-family: $big-shoulders-display;
+    font-weight: 700;
+}
+
+p {
+    color: $transparent-white;
+    font-family: $lexend-deca;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+// 
+// Utility classes
+// 
+
+
+// 
+// Media queries 
+// 
+@media screen and (min-width: 765px) {
+    .main {
+        flex-direction: row;
+    }
+}
