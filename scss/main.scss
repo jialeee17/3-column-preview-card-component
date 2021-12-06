@@ -9,7 +9,10 @@ body {
 
 .main {
     width: 90%;
+    max-width: 992px;
     margin: 0 auto;
+    border-radius: 1.5rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -36,25 +39,49 @@ body {
         }
 
         h2 {
-            font-size: 3rem;
+            font-size: 2.8rem;
+            letter-spacing: .1rem;
             text-transform: uppercase;
         }
 
         .btn-learnMore {
-            padding: 1rem 2.5rem;
+            padding: .8rem 2.5rem;
             background: $very-light-gray;
+            border: 2px solid transparent;
             border-radius: 2.5rem;
             color: #000;
             font-size: 1.8rem;
+            transition: background .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out;
 
             &.btn-learnMore--orange {
                 color: $bright-orange;
+
+                &:hover {
+                    background: $bright-orange;
+                    border: 2px solid $transparent-white;
+                    box-shadow: 0px 0px 5px #fff;
+                    color: $transparent-white;
+                }
             }
             &.btn-learnMore--darkCyan {
                 color: $dark-cyan;
+
+                &:hover {
+                    background: $dark-cyan;
+                    border: 2px solid $transparent-white;
+                    box-shadow: 0px 0px 5px #fff;
+                    color: $transparent-white;
+                }
             }
             &.btn-learnMore--veryDarkCyan {
                 color: $very-dark-cyan;
+
+                &:hover {
+                    background: $very-dark-cyan;
+                    border: 2px solid $transparent-white;
+                    box-shadow: 0px 0px 5px #fff;
+                    color: $transparent-white;
+                }
             }
         }
 
@@ -83,14 +110,9 @@ h2, a {
 p {
     color: $transparent-white;
     font-family: $lexend-deca;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 400;
 }
-
-// 
-// Utility classes
-// 
-
 
 // 
 // Media queries 
@@ -98,5 +120,25 @@ p {
 @media screen and (min-width: 765px) {
     .main {
         flex-direction: row;
+
+        .col {
+            padding: 5rem;
+
+            p {
+                margin-bottom: 8rem;
+            }
+        }
+
+        & div:first-child {
+            border-top-left-radius: 1.5rem;
+            border-bottom-left-radius: 1.5rem;
+            border-top-right-radius: 0;
+        }
+
+        & div:last-child {
+            border-top-right-radius: 1.5rem;
+            border-bottom-right-radius: 1.5rem;
+            border-bottom-left-radius: 0;
+        }
     }
 }

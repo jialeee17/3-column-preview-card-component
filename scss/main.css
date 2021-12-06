@@ -18,7 +18,11 @@ body {
 
 .main {
   width: 90%;
+  max-width: 992px;
   margin: 0 auto;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,28 +57,56 @@ body {
 }
 
 .main .col h2 {
-  font-size: 3rem;
+  font-size: 2.8rem;
+  letter-spacing: .1rem;
   text-transform: uppercase;
 }
 
 .main .col .btn-learnMore {
-  padding: 1rem 2.5rem;
+  padding: .8rem 2.5rem;
   background: #f2f2f2;
+  border: 2px solid transparent;
   border-radius: 2.5rem;
   color: #000;
   font-size: 1.8rem;
+  -webkit-transition: background .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out;
+  transition: background .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out;
 }
 
 .main .col .btn-learnMore.btn-learnMore--orange {
   color: #e38826;
 }
 
+.main .col .btn-learnMore.btn-learnMore--orange:hover {
+  background: #e38826;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 0px 0px 5px #fff;
+          box-shadow: 0px 0px 5px #fff;
+  color: rgba(255, 255, 255, 0.75);
+}
+
 .main .col .btn-learnMore.btn-learnMore--darkCyan {
   color: #006970;
 }
 
+.main .col .btn-learnMore.btn-learnMore--darkCyan:hover {
+  background: #006970;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 0px 0px 5px #fff;
+          box-shadow: 0px 0px 5px #fff;
+  color: rgba(255, 255, 255, 0.75);
+}
+
 .main .col .btn-learnMore.btn-learnMore--veryDarkCyan {
   color: #004241;
+}
+
+.main .col .btn-learnMore.btn-learnMore--veryDarkCyan:hover {
+  background: #004241;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 0px 0px 5px #fff;
+          box-shadow: 0px 0px 5px #fff;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .main .col.col--sedans {
@@ -98,7 +130,7 @@ h2, a {
 p {
   color: rgba(255, 255, 255, 0.75);
   font-family: "Lexend Deca", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 
@@ -108,5 +140,21 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .main .col {
+    padding: 5rem;
+  }
+  .main .col p {
+    margin-bottom: 8rem;
+  }
+  .main div:first-child {
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    border-top-right-radius: 0;
+  }
+  .main div:last-child {
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    border-bottom-left-radius: 0;
   }
 }
