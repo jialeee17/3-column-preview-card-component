@@ -1,5 +1,6 @@
 @import 'base/reset';
 @import 'base/variables';
+@import 'components/popup-alert';
 
 body {
     width: 100vw;
@@ -51,6 +52,7 @@ body {
             border-radius: 2.5rem;
             color: #000;
             font-size: 1.8rem;
+            user-select: none;
             transition: background .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out;
 
             &.btn-learnMore--orange {
